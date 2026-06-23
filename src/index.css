@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+    --primary: 217 55% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 96%;
+    --secondary-foreground: 210 20% 15%;
+    --muted: 210 10% 96%;
+    --muted-foreground: 200 12% 47%;
+    --accent: 210 10% 96%;
+    --accent-foreground: 210 20% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 10% 90%;
+    --input: 210 10% 90%;
+    --ring: 217 55% 51%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  body {
+    @apply bg-white text-text-dark font-body antialiased;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-[120px] px-4 md:px-5;
+  }
+
+  .content-max-width {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-brand-blue text-white font-bold text-[11px] uppercase tracking-wider transition-all duration-300 hover:bg-opacity-90 hover:scale-[1.02];
+  }
+
+  .btn-bordered {
+    @apply inline-block px-8 py-3 border-2 border-brand-blue text-brand-blue font-bold text-[11px] uppercase tracking-wider transition-all duration-300 hover:bg-brand-blue hover:text-white;
+  }
+
+  .text-display {
+    @apply font-display text-[77px] leading-[0.8] font-normal;
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.30s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+.reveal-delay-4 { transition-delay: 0.60s; }
+.reveal-delay-5 { transition-delay: 0.75s; }
+.reveal-delay-6 { transition-delay: 0.90s; }
+.reveal-delay-7 { transition-delay: 1.05s; }
+.reveal-delay-8 { transition-delay: 1.20s; }
